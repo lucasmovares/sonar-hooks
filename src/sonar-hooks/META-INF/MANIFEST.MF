@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven 3.9.11
+Built-By: nagtzlj
+Build-Jdk: 21.0.7
+Plugin-Dependencies: META-INF/lib/gson-2.10.1.jar
+Plugin-ChildFirstClassLoader: false
+Plugin-Homepage: https://github.com/movares/sonar-hooks-plugin
+Plugin-Developers: 
+Plugin-License: 
+SonarLint-Supported: false
+Plugin-Key: sonarhooks
+Plugin-BuildDate: 2025-07-22T13:42:58+0000
+Plugin-Version: 1.0.0
+Plugin-Organization: Movares
+Plugin-Name: Issue Hooks Plugin
+Plugin-Class: com.movares.sonar.hooks.SonarHooksPlugin
+Plugin-Description: Sends webhooks when issues are updated
+Plugin-OrganizationUrl: https://www.movares.com
+Plugin-Display-Version: 1.0.0
+Sonar-Version: 9.4
+

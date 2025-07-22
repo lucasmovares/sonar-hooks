@@ -1,0 +1,23 @@
+# Maven build artifacts
+target/classes/
+target/test-classes/
+target/maven-archiver/
+target/maven-status/
+target/surefire-reports/
+
+# IDE files
+.idea/
+*.iml
+.settings/
+.project
+.classpath
+
+# Git
+.git/
+.gitignore
+
+# Other
+*.log
+META-INF/
+test-webhook-receiver.py
+configure-plugin.ps1 
