@@ -9,6 +9,10 @@ on:
     # Run weekly on Sundays at 00:00 UTC
     - cron: '0 0 * * 0'
 
+permissions:
+  contents: read
+  actions: read
+
 jobs:
   test:
     name: Test on JDK ${{ matrix.java }} / ${{ matrix.os }}
@@ -44,14 +48,6 @@ jobs:
     - name: Run tests
       run: mvn test -B
       working-directory: src/sonar-hooks
-      
-    - name: Generate test report
-      uses: dorny/test-reporter@v1
-      if: success() || failure()
-      with:
-        name: Test Results (JDK ${{ matrix.java }} / ${{ matrix.os }})
-        path: 'src/sonar-hooks/target/surefire-reports/*.xml'
-        reporter: java-junit
         
   package:
     name: Package Plugin
