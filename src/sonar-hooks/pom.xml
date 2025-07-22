@@ -23,7 +23,7 @@
     <sonar.api.version>6.7.7</sonar.api.version>
         
         <!-- Plugin versions -->
-        <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
+        <maven.compiler.plugin.version>3.14.0</maven.compiler.plugin.version>
         <sonar.packaging.plugin.version>1.23.0.740</sonar.packaging.plugin.version>
         
         <!-- Test versions -->
