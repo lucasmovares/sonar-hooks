@@ -50,7 +50,7 @@ jobs:
     - name: Update version in POM
       run: |
         mvn versions:set -DnewVersion=${{ inputs.version }} -DgenerateBackupPoms=false
-        git add src/sonar-hooks/pom.xml
+        git add pom.xml
         git commit -m "chore: bump version to ${{ inputs.version }}"
       working-directory: src/sonar-hooks
       
@@ -135,7 +135,7 @@ jobs:
         NEXT_DEV_VERSION="${MAJOR}.${NEXT_MINOR}.0-SNAPSHOT"
         
         mvn versions:set -DnewVersion=$NEXT_DEV_VERSION -DgenerateBackupPoms=false
-        git add src/sonar-hooks/pom.xml
+        git add pom.xml
         git commit -m "chore: prepare for next development iteration $NEXT_DEV_VERSION"
         git push origin main
       working-directory: src/sonar-hooks 
