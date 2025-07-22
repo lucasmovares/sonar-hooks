@@ -27,8 +27,8 @@
         <sonar.packaging.plugin.version>1.23.0.740</sonar.packaging.plugin.version>
         
         <!-- Test versions -->
-        <junit.version>5.10.0</junit.version>
-        <mockito.version>5.5.0</mockito.version>
+        <junit.version>5.13.4</junit.version>
+        <mockito.version>5.18.0</mockito.version>
     </properties>
 
     <repositories>
@@ -106,7 +106,7 @@
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
-            <version>3.24.2</version>
+            <version>3.27.3</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
