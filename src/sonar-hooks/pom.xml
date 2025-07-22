@@ -18,9 +18,9 @@
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         
-        <!-- SonarQube version -->
-        <sonarqube.version>6.7.7</sonarqube.version>
-        <sonar.api.version>6.7.7</sonar.api.version>
+            <!-- SonarQube version -->
+    <sonarqube.version>6.7.7</sonarqube.version>
+    <sonar.api.version>6.7.7</sonar.api.version>
         
         <!-- Plugin versions -->
         <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
@@ -135,7 +135,7 @@
                     <pluginClass>com.movares.sonar.hooks.SonarHooksPlugin</pluginClass>
                     <pluginName>Issue Hooks Plugin</pluginName>
                     <pluginDescription>Sends webhooks when issues are updated</pluginDescription>
-                    <pluginApiMinVersion>6.7</pluginApiMinVersion>
+                    <pluginApiMinVersion>9.4</pluginApiMinVersion>
                     <pluginUrl>https://github.com/movares/sonar-hooks-plugin</pluginUrl>
                     <pluginOrganizationName>Movares</pluginOrganizationName>
                     <pluginOrganizationUrl>https://www.movares.com</pluginOrganizationUrl>
