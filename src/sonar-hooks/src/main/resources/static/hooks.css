@@ -1,0 +1,36 @@
+.page {
+  padding: 20px;
+}
+
+.settings-section {
+  margin-top: 20px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 2px;
+  padding: 20px;
+}
+
+.settings-list {
+  margin-top: 15px;
+}
+
+.settings-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.settings-item:last-child {
+  border-bottom: none;
+}
+
+.settings-item label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #236a97;
+}
+
+.settings-item .value {
+  color: #444;
+  font-family: monospace;
+} 

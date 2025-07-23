@@ -6,7 +6,7 @@
 
     <groupId>com.movares.sonar</groupId>
     <artifactId>sonar-hooks-plugin</artifactId>
-    <version>1.2.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>sonar-plugin</packaging>
 
     <name>SonarQube Issue Hooks Plugin</name>
@@ -25,6 +25,7 @@
         <!-- Plugin versions -->
         <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
         <sonar.packaging.plugin.version>1.23.0.740</sonar.packaging.plugin.version>
+        <maven.assembly.plugin.version>3.6.0</maven.assembly.plugin.version>
         
         <!-- Test versions -->
         <junit.version>5.10.0</junit.version>
@@ -152,29 +153,22 @@
                 </configuration>
             </plugin>
 
-            <!-- Versions Plugin for Release Management -->
+            <!-- Assembly Plugin for creating webapp zip -->
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>versions-maven-plugin</artifactId>
-                <version>2.16.2</version>
-            </plugin>
-
-            <!-- JaCoCo Plugin for Coverage -->
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.11</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>${maven.assembly.plugin.version}</version>
+                <configuration>
+                    <descriptors>
+                        <descriptor>src/assembly/webapp.xml</descriptor>
+                    </descriptors>
+                </configuration>
                 <executions>
                     <execution>
+                        <id>create-webapp-archive</id>
+                        <phase>package</phase>
                         <goals>
-                            <goal>prepare-agent</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>report</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>report</goal>
+                            <goal>single</goal>
                         </goals>
                     </execution>
                 </executions>
