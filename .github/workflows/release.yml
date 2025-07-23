@@ -59,7 +59,9 @@ jobs:
       working-directory: src/sonar-hooks
       
     - name: Build plugin
-      run: mvn clean package -B -DskipTests
+      run: |
+        mvn clean package -B -DskipTests
+        mvn assembly:single -DdescriptorId=webapp
       working-directory: src/sonar-hooks
       
     - name: Create release tag
@@ -118,6 +120,7 @@ jobs:
         body_path: CHANGELOG.md
         files: |
           src/sonar-hooks/target/sonar-hooks-plugin-${{ inputs.version }}.jar
+          src/sonar-hooks/target/sonar-hooks-plugin-${{ inputs.version }}-webapp.zip
         draft: false
         prerelease: false
         generate_release_notes: false
