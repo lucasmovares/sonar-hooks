@@ -25,7 +25,7 @@
         <!-- Plugin versions -->
         <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
         <sonar.packaging.plugin.version>1.23.0.740</sonar.packaging.plugin.version>
-        <maven.assembly.plugin.version>3.6.0</maven.assembly.plugin.version>
+        <maven.assembly.plugin.version>3.7.1</maven.assembly.plugin.version>
         
         <!-- Test versions -->
         <junit.version>5.10.0</junit.version>
