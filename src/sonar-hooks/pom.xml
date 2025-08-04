@@ -20,7 +20,7 @@
         
             <!-- SonarQube version -->
     <sonarqube.version>6.7.7</sonarqube.version>
-    <sonar.api.version>6.7.7</sonar.api.version>
+    <sonar.api.version>9.4.0.54424</sonar.api.version>
         
         <!-- Plugin versions -->
         <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
